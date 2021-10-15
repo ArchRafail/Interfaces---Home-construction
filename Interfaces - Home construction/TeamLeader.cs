@@ -24,30 +24,15 @@ namespace Interfaces___Home_construction
             foreach (var obj in list)
             {
                 if (obj is Basement)
-                {
-                    obj.ShowPart();
-                    Console.WriteLine($" - {checkStatus(obj.Status)}.");
-                }
+                    Console.WriteLine($"{obj.ShowPart()} - {checkStatus(obj.Status)}.");
                 if (obj is Wall)
-                {
-                    obj.ShowPart();
-                    Console.WriteLine($"{wall++} - {checkStatus(obj.Status)}.");
-                }
+                    Console.WriteLine($"{obj.ShowPart()}{wall++} - {checkStatus(obj.Status)}.");
                 if (obj is Door)
-                {
-                    obj.ShowPart();
-                    Console.WriteLine($" - {checkStatus(obj.Status)}.");
-                }
+                    Console.WriteLine($"{obj.ShowPart()} - {checkStatus(obj.Status)}.");
                 if (obj is Window)
-                {
-                    obj.ShowPart();
-                    Console.WriteLine($"{window++} - {checkStatus(obj.Status)}.");
-                }
+                    Console.WriteLine($"{obj.ShowPart()}{window++} - {checkStatus(obj.Status)}.");
                 if (obj is Roof)
-                {
-                    obj.ShowPart();
-                    Console.WriteLine($" - {checkStatus(obj.Status)}.");
-                }
+                    Console.WriteLine($"{obj.ShowPart()} - {checkStatus(obj.Status)}.");
                 if (obj is Roof && obj.Status == true)
                     check = true;
             }
